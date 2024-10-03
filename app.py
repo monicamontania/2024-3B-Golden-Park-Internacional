@@ -1,10 +1,13 @@
 import os
 
+hotel = [{'nome':'Pedro', 'categoria':'suite', 'ativo':True},
+         {'nome':'Fernanda', 'categoria':'quarto triple', 'ativo':True},
+         {'nome':'Larissa', 'categoria':'quarto duplo', 'ativo':True}]
+
 hospedes = []
 
 def mostra_titulo():
 
-def mostra_titulo():
  print("""
 𝕲𝖔𝖑𝖉𝖊𝖓 𝕻𝖆𝖗𝖐 𝕴𝖓𝖙𝖊𝖗𝖓𝖆𝖈𝖎𝖔𝖓𝖆𝖑
 """)
@@ -19,6 +22,7 @@ def escolhe_opcao():
     try:
         opcao_escolhida = int(input('Escolha uma opção: '))
         print('Você escolheu a opção: ', opcao_escolhida)
+
 
         if opcao_escolhida == 1:
             print('Cadastrar hospede')
@@ -35,11 +39,13 @@ def escolhe_opcao():
     
 def mostra_hospedes():
     os.system('cls')
-    print('Lista de hospedes\n')
+    
 
     for hospedes in hospedes:
+        nome_hotel = hotel['nome']
+        categoria = hotel['categoria']
+        ativo = hotel['ativo']
         print(f'-{hospedes}') 
-
         input('\nDigite uma tecla para voltar ao menu principal:')
         main()   
 
